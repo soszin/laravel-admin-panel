@@ -1,12 +1,4 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-require('./bootstrap');
-
-window.Vue = require('vue');
+// require('./bootstrap');
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +11,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,6 +19,25 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue'
+import VueI18Next from '@panter/vue-i18next';
+
+import './vendor.js'
+
+import App from './App.vue';
+import router from './router';
+import i18next from './i18n.js';
+import store from './store';
+
+Vue.use(BootstrapVue);
+Vue.use(VueI18Next);
+
+const i18n = new VueI18Next(i18next);
+
+new Vue({
+    i18n,
+    router,
+    store,
+    ...App
+}).$mount('#app');
