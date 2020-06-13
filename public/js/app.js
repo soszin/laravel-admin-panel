@@ -1506,7 +1506,7 @@ var FULLSCREEN_OFF_ICON = 'fa fa-compress';
     handleClick: function handleClick(e) {
       e.preventDefault();
 
-      if (screenfull__WEBPACK_IMPORTED_MODULE_0___default.a.enabled) {
+      if (screenfull__WEBPACK_IMPORTED_MODULE_0___default.a.isEnabled) {
         screenfull__WEBPACK_IMPORTED_MODULE_0___default.a.toggle();
         this.toggleFSIcon();
       } else {
@@ -73705,6 +73705,11 @@ var Menu = [{
     translate: 'sidebar.nav.SUBMENU',
     path: 'submenu'
   }]
+}, {
+  name: 'Users',
+  path: 'users',
+  icon: 'icon-people',
+  translate: 'sidebar.nav.MENU'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
@@ -73732,6 +73737,10 @@ var Dashboard = function Dashboard() {
   return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/Dashboard.vue */ "./resources/js/views/Dashboard.vue"));
 };
 
+var Users = function Users() {
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../views/pages/users/Users.vue */ "./resources/js/views/pages/users/Users.vue"));
+};
+
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
@@ -73739,6 +73748,13 @@ var Dashboard = function Dashboard() {
     children: [{
       path: '/dashboard',
       component: Dashboard
+    }]
+  }, {
+    path: '/users',
+    component: _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_2__["default"],
+    children: [{
+      path: '/',
+      component: Users
     }]
   }]
 }));

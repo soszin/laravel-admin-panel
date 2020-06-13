@@ -37,7 +37,7 @@ export default {
         handleClick: function(e) {
             e.preventDefault();
 
-            if (screenfull.enabled) {
+            if (screenfull.isEnabled) {
 
                 screenfull.toggle();
 

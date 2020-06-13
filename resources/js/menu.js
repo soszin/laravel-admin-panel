@@ -19,6 +19,12 @@ const Menu = [
             translate: 'sidebar.nav.SUBMENU',
             path: 'submenu'
         }]
+    },
+    {
+        name: 'Users',
+        path: 'users',
+        icon: 'icon-people',
+        translate: 'sidebar.nav.MENU',
     }
 ];
 

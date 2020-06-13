@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import Layout from '../components/Layout/Layout'
 const Dashboard = () => import('../views/Dashboard.vue');
+const Users = () => import('../views/pages/users/Users.vue');
 
 export default new VueRouter({
     routes: [
@@ -15,6 +16,16 @@ export default new VueRouter({
                 {
                     path: '/dashboard',
                     component: Dashboard,
+                }
+            ]
+        },
+        {
+            path: '/users',
+            component: Layout,
+            children: [
+                {
+                    path: '/',
+                    component: Users,
                 }
             ]
         }
