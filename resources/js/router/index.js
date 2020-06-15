@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import Layout from '../components/Layout/Layout'
 const Dashboard = () => import('../views/Dashboard.vue');
 const Users = () => import('../views/pages/users/Users.vue');
+const CreateUser = () => import('../views/pages/users/CreateUser.vue');
 
 export default new VueRouter({
     routes: [
@@ -26,6 +27,10 @@ export default new VueRouter({
                 {
                     path: '/',
                     component: Users,
+                },
+                {
+                    path: "create",
+                    component: CreateUser
                 }
             ]
         }

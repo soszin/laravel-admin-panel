@@ -2,6 +2,12 @@
     <content-wrapper>
         <div class="content-heading">
             <div>Users</div>
+            <div class="ml-auto">
+                <router-link class="btn btn-labeled btn-success"
+                             :to="`/users/create`">
+                    <span class="btn-label"><i class="fa fa-plus"></i></span>Dodaj
+                </router-link>
+            </div>
         </div>
         <vuetable ref="vuetable"
                   api-url="https://vuetable.ratiw.net/api/users"

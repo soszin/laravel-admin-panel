@@ -73734,11 +73734,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 
 var Dashboard = function Dashboard() {
-  return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/Dashboard.vue */ "./resources/js/views/Dashboard.vue"));
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/Dashboard.vue */ "./resources/js/views/Dashboard.vue"));
 };
 
 var Users = function Users() {
-  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../views/pages/users/Users.vue */ "./resources/js/views/pages/users/Users.vue"));
+  return Promise.all(/*! import() */[__webpack_require__.e(4), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! ../views/pages/users/Users.vue */ "./resources/js/views/pages/users/Users.vue"));
+};
+
+var CreateUser = function CreateUser() {
+  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ../views/pages/users/CreateUser.vue */ "./resources/js/views/pages/users/CreateUser.vue"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
@@ -73755,6 +73759,9 @@ var Users = function Users() {
     children: [{
       path: '/',
       component: Users
+    }, {
+      path: "create",
+      component: CreateUser
     }]
   }]
 }));
