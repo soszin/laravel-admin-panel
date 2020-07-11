@@ -6,13 +6,16 @@ import SettingModule from './modules/setting.js'
 import SettingPlugin from './plugins/setting.js'
 import ThemeModule from './modules/theme.js'
 import ThemePlugin from './plugins/theme.js'
+import AuthModule from './modules/auth.js'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+    state: {},
     modules: {
         setting: SettingModule,
-        theme: ThemeModule
+        theme: ThemeModule,
+        auth: AuthModule
     },
     plugins: [
         createPersistedState({

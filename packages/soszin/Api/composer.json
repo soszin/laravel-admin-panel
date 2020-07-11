@@ -1,0 +1,25 @@
+{
+    "name": "soszin/api",
+    "description": "Formating response for client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dawid Sroczyński",
+            "email": "d.sroczynski92@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Soszin\\Api\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Soszin\\Api\\Providers\\ResponseServiceProvider"
+            ]
+        }
+    }
+}
